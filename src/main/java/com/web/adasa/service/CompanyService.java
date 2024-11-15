@@ -19,6 +19,10 @@ public class CompanyService {
         companyRepository.save(company);
     }
 
+    public Optional<Company> getByCode(String codigoCompany){
+        return companyRepository.findByCodigoCompany(codigoCompany);
+    }
+
     public Optional<Company> getOne(Integer id){
         return companyRepository.findById(id);
     }

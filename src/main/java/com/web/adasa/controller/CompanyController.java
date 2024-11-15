@@ -37,6 +37,16 @@ public class CompanyController {
         return new ResponseEntity(company, HttpStatus.OK);
     }
 
+    @GetMapping("/findByCode/{code}")
+    public ResponseEntity<Company> getByCode(@PathVariable("code") String code){
+
+        if(!companyService.existsByCodigoCompany(code))
+            return new ResponseEntity(new Mensaje("Este codigo no existe"), HttpStatus.NOT_FOUND);
+
+        Company company = companyService.getByCode(code).get();
+        return new ResponseEntity(company, HttpStatus.OK);
+    }
+
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id")int id, @RequestBody CompanyDTO companyDTO){
         if(!companyService.existsById(id))
