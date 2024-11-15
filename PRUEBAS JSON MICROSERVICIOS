@@ -55,7 +55,16 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "localhost:8084/company/delete/1"
+				"url": "localhost:8084/company/delete/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Company By Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8084/company/findByCode/005"
 			},
 			"response": []
 		}
