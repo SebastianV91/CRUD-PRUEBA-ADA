@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "dee4d18d-68a8-4656-a615-ffdefc217198",
+		"name": "Company",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save Company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoCompany\":\"005\",\r\n    \"nameCompany\":\"Company\",\r\n    \"descriptionCompany\":\"The best\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8084/company/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Company",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoCompany\":\"005\",\r\n    \"nameCompany\":\"Company\",\r\n    \"descriptionCompany\":\"The best\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8084/company/update/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Company By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8084/company/findById/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete company",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8084/company/delete/1"
+			},
+			"response": []
+		}
+	]
+}
